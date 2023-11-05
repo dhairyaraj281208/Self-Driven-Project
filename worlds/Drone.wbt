@@ -1,0 +1,108 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackgroundLight.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/robots/husarion/rosbot/protos/Rosbot.proto"
+
+WorldInfo {
+}
+Viewpoint {
+  orientation -0.11824721849120105 -0.000993499260449809 0.9929836898349912 3.158302044399095
+  position 2.1070199187576133 0.03830128608716423 0.5382283850282519
+}
+TexturedBackground {
+}
+TexturedBackgroundLight {
+}
+Solid {
+  children [
+    DEF ground Shape {
+      appearance PBRAppearance {
+        baseColor 0 0 0
+        roughness 1
+        metalness 0
+      }
+      geometry Plane {
+        size 7 6
+      }
+    }
+  ]
+  boundingObject USE ground
+}
+Solid {
+  translation 0.51 1.87358e-06 0.01
+  rotation 0 0 1 1.5708
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Plane {
+        size 0.05 2
+      }
+    }
+  ]
+  name "solid(1)"
+}
+Solid {
+  translation 1.48 0.98 0.01
+  children [
+    Shape {
+      appearance PBRAppearance {
+        baseColor 1 1 0
+        roughness 1
+        metalness 0
+      }
+      geometry Plane {
+        size 0.05 2
+      }
+    }
+  ]
+  name "solid(2)"
+}
+Rosbot {
+  hidden position_0_0 2.9913101465245373
+  hidden position_0_1 1.8691499344036322
+  hidden position_0_2 2.9913163916497147
+  hidden position_0_3 1.8691560999481263
+  hidden linearVelocity_0 0.0691653103884689 0.003265827299986725 3.610423828671514e-06
+  hidden angularVelocity_0 0.00022787611963959935 0.0008812389817911417 -0.4602707370819847
+  hidden rotation_2 0 0.9999999999999999 0 2.9913101465245373
+  hidden linearVelocity_2 0.1096982619736331 -0.02597126500323168 -4.635495334923688e-05
+  hidden angularVelocity_2 0.5691353212782044 2.9463441376403807 -0.466480306165084
+  hidden rotation_3 0 1 0 1.8691499344036322
+  hidden linearVelocity_3 0.020609304441640008 -0.008692829101335495 -3.986500459905055e-05
+  hidden angularVelocity_3 0.05727995303329719 0.29539890479338515 -0.4603389773633955
+  hidden rotation_4 0 1 0 2.9913163916497147
+  hidden linearVelocity_4 0.11889124050311081 0.021476072930545962 4.7247940776287456e-05
+  hidden angularVelocity_4 0.5691343860250653 2.946345705991892 -0.4664816973083231
+  hidden rotation_5 0 1 0 1.869156099948126
+  hidden linearVelocity_5 0.029805548415516227 0.03875089451163654 5.366282599624128e-05
+  hidden angularVelocity_5 0.057279293586507324 0.29539994053982943 -0.46033927783037415
+  translation -0.050541593708004 0.01215053124762883 -0.0005234392052281961
+  rotation 6.831427977388303e-05 0.0010860891264778804 -0.999999407871609 0.19954395429236682
+  controller "my_controller"
+  cameraSlot [
+    DEF camera Camera {
+      translation 0.11 0 -0.13
+      children [
+        Solid {
+          children [
+            Shape {
+              appearance PBRAppearance {
+              }
+              geometry Box {
+                size 0.01 0.01 0.01
+              }
+            }
+          ]
+        }
+      ]
+      fieldOfView 1
+      width 128
+      height 128
+    }
+  ]
+}
